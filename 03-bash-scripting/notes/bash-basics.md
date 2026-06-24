@@ -30,7 +30,7 @@ Learning basic Bash commands is an essential skill for linux users, system admin
 | `-1` | one file per line | `ls -1` | 
 | `-d` | list directories themselves not their token | `ls -d` |
 | `-F` | Append file indicators | `ls -F` | 
-| `--color=auto | Colorized ooutput | `ls --color=auto` |
+| `--color=auto` | Colorized ooutput | `ls --color=auto` |
 
 ---
 ### iii. Combining Options
@@ -80,7 +80,7 @@ ls -lah
  
  ---
 
- ## 4. Thee `echo ` command
+ ## 4. The `echo ` command
  ### i. Purpose
  - Used to show a line of text or variables in the terminal.
 
@@ -158,7 +158,7 @@ ls -lah
  ```
  - it used to move multiple files.
 
-## 8. The `em` Command
+## 8. The `rm` Command
 ### i. Purpose
 - Used to remove files or directtories
 ### ii. Basic  usage
@@ -197,7 +197,7 @@ touch filename
 
 ---
 
-## 9. The ~mkdir` Command
+## 9. The `mkdir` Command
 ### i.Purpose
 - Used to create new directories 
 
