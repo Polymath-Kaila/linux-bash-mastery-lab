@@ -132,7 +132,7 @@ ls -lah
  ```
  - it is used to copymultiple files.
 
- ## The `mv` command
+ ## 7.The `mv` command
  ### i. Purpose
  - It is used to move files and directories
  - It is  also used to rename files and directories.
@@ -156,9 +156,91 @@ ls -lah
  ```bash
  mv *.txt /destination/
  ```
- - it used to move multiple filesy.
+ - it used to move multiple files.
 
- 
+## 8. The `em` Command
+### i. Purpose
+- Used to remove files or directtories
+### ii. Basic  usage
+```bash
+rm filename
+```
+
+| Command | Meaning | 
+|-----------|--------|
+| `rm -r` | Delete a folser and everything inside it. |
+| `rm -i` | Ask before deleting files |
+| `rm -f` | Force deleting without asking |
+| `rm -v` | Verbose mode,  Show  the files/foldersbeing deleted|
+
+---
+
+```bash
+rm *.class 
+```
+- This Deletes all the files with a .class extension inside the current directory.
+
+## The `touch` Command
+### i.  Purpose
+- Used to change the time stamps or create an empty file if it does not exist.
+
+### ii. Basic usage
+```bash
+touch filename
+```
+| Command | Meaning |
+|-----------|---------|
+| `touch -a` | update only when the file was last used |
+| `touch -m` | Update only when the file was last changed |
+| `touch -t` | Set the timestamp to a specific time `touch -t 202601010000 test.txt` |
+| `touch -c` | Do not create any files |
+
+---
+
+## 9. The ~mkdir` Command
+### i.Purpose
+- Used to create new directories 
+
+```bash
+mkdir folder_name
+```
+| Command | Meaning |
+|-----------|-----------|
+| `mkdir -p` | Parent direcories as needed |
+| `mkdir -v` | Show a message for each created directory |
+| `mkdir -m` | set file  permission ```bash  mkdir -m 755 ``` |
+
+![File Permissions](permission.png)
+
+---
+
+## 10. The `man`  Command
+### i.Purpose
+- Used to display the user manual of any command that can be run on terminal
+
+```bash
+man command_name
+```
+[] ie. `man ls`
+
+---
+## 11. Bash `alias`
+### i. Purpose
+- it allows a user to create a shortcut for a long or frequently used command
+- This makes it easy kto execute complex commands with a simple keyword
+
+```bash
+alias name='command'
+```
+[] name is the shortcut name you want to use.
+[] command is the full command you want to execute
+
+----
+-for removing an alias:
+```bash
+unalias name
+```
+------------------------------------------------------------------------------------
 
 
 
