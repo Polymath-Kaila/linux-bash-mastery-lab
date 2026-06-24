@@ -9,13 +9,13 @@ and administer systems.
 Learning basic Bash commands is an essential skill for linux users, system administsrators, software developers and cybersecurity professionals. Understanding commands such as `ls`, `cd`, `pwd`, and `mkdir` help users navigate the file system, inspect directory conteents and work more effecively in aterminal environment. This guide introduces fundamental Bsh commands and their commonly used options.  
 
 ---
-## The `ls` Command
-### Purpose
+## 1. The `ls` Command
+### i. Purpose
 - List files and directories.
 - Helps inspet folder contents.
 - Can display hidden files and permissions.
 
-### Basic Syntax
+### ii. Basic Syntax
 
 ---
 | Command | Description/ Function | Example |
@@ -25,3 +25,141 @@ Learning basic Bash commands is an essential skill for linux users, system admin
 | `-h` | Human-readable sizes | `ls -h` |
 | `-t` | Sort by modification time | `ls -t` |
 | `-r` | Reverse Sorting | `ls -r` | 
+| `-R` | List subdirectories recursively | `ls -R`|
+| `-S` | Sort by file size | `ls -S` |
+| `-1` | one file per line | `ls -1` | 
+| `-d` | list directories themselves not their token | `ls -d` |
+| `-F` | Append file indicators | `ls -F` | 
+| `--color=auto | Colorized ooutput | `ls --color=auto` |
+
+---
+### iii. Combining Options
+```bash
+ls -lah
+```
+[] Breakdown
+- l => long listing
+- a => list including hidden files
+- h => human-readable sizes
+
+### iv. Understanding Hidden Files
+- Hidden files start with `.`
+- Examples:
+        - `.baashrc`
+        - `.gitignore`
+        - `.profile`
+- Command example:
+ ```bash
+ ls -a
+ ```
+ ---
+ ## 2.Directory Navigation `cd`
+ ### i. Purpose
+ - it is used to change/ navigate through directories
+ ### ii. Common Commands
+
+ | Command | Meaning |
+ |------| ------- |
+ | `cd` | Go to home directory |
+ | `cd ~` | Go to home directory | 
+ | `cd ..` | Move one level up |
+ | `cd - ` | switch to previous directory| 
+ | `cd / ` | Change to Root Directory | 
+ | `cd foldername` | Enter a folder |
+
+ ---
+
+ ## 3. The `pwd` command
+ ### i. Purpose
+ - it shows hte current working directory.
+
+ | Command | Meaning |
+ |-----------|---------|
+ | `pwd -l` | Displays the logical current working directory. |
+ | `pwd -P` | Displays the physical current working directory.|
+ 
+ ---
+
+ ## 4. Thee `echo ` command
+ ### i. Purpose
+ - Used to show a line of text or variables in the terminal.
+
+ | Command | Meaning |
+ |----------|----------|
+ | `echo -n` | Dont add  a  new line at the end |
+ | `echo -e` | Allows special  characters ie. `\n` for new lines |
+ | `echo -E` | Don't  allow special characters (Default)|
+
+ ---
+
+ ## 5. The `cat` Command
+ ### i. Purpose
+ - Used to show the contents of a file in a terminal.
+ - It can also be used to combine multile files
+
+ ### ii. Basic usage
+ ```bash
+ cat filename
+ ```
+ | Command | Meaning |
+ |---------|-------------|
+ | `cat -n` | Add numbers to each line |
+ | `cat -b` | Add numbers only to lines with text |
+ | `cat -s` | Remove extra lines |
+ | `cat -v` | Show non-printing characters(Except for tabs and end of lines) |
+
+ ---
+
+ ## 6. The `cp` Command
+ ### i. Purpose
+ - Used to copy  files and directories from one location to another.
+ ### ii. Basic usage
+ ```bash
+ cp source_file destination_file
+ ```
+ | Command | Meaning |
+ |-------------|---------|
+ | `cp -r` | Copy all files and folders in a directory |
+ | `cp -i` | Ask  before replacing files |
+ | `cp -u` | Copyonly if the source is newer |
+ | `cp -v` | Verbose mode, show files being copied|
+
+ ---
+
+ ### iii. `cp` with  wildcards
+ ```bash
+ cp *.txt /destination/
+ ```
+ - it is used to copymultiple files.
+
+ ## The `mv` command
+ ### i. Purpose
+ - It is used to move files and directories
+ - It is  also used to rename files and directories.
+ ### ii. Basic usage
+ ```bash
+ mv source_file destination_file
+ ```
+ or 
+ ```bash
+ mv old_filename new-filename
+ ```
+ when renaming a file or directory
+ ---
+ | Command | Meaning |
+ |----------|-----------|
+ | `mv -i` | Ask before replacing |
+ | `mv -u` | Move only if the source is newer |
+ | `mv -v` | Verbose mode, Show files or directories being moved |
+
+ ### iii. `mv` with wildcards
+ ```bash
+ mv *.txt /destination/
+ ```
+ - it used to move multiple filesy.
+
+ 
+
+
+
+
