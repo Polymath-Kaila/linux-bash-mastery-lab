@@ -227,12 +227,12 @@ man command_name
 ## 11. Bash `alias`
 ### i. Purpose
 - it allows a user to create a shortcut for a long or frequently used command
-- This makes it easy kto execute complex commands with a simple keyword
+- This makes it easy to execute complex commands with a simple keyword
 
 ```bash
 alias name='command'
 ```
-[] name is the shortcut name you want to use.
+[] name is the shortcut name you want to use.  
 [] command is the full command you want to execute
 
 ----
