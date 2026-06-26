@@ -1,4 +1,4 @@
-# Bash Basics
+# 1. Bash Basics
 ## Introduction
 Bash (Bourne Again Shell) is acommand-line interpreter commonly used in Linux and Unix-based operating systems. It allowa users to interactwith the operating system by typing commands instead of using a graphical interface. Bash provides a fast and efficient way to:  
 navigate directories,  
@@ -240,7 +240,150 @@ alias name='command'
 ```bash
 unalias name
 ```
-------------------------------------------------------------------------------------
+---------------------------------------------------------------------------
+
+# 2. Text Processing in Linux:
+## Goal
+Learn how to search, modify, and analyze text files using linux commands
+
+## 1. The `grep` Command
+### i. Purpose
+The `grep` command searches for lines that contain a specific word, pattern or expression.
+### ii. Basic syntax.
+```bash
+grep pattern filename
+```
+- example: `grep John students.txt
+- The output should be any occurence of the word John in the file students.txt
+
+| Command | Meaning | Examples|
+|-----------|----------|---------|
+| `grep -i` | Search ignoring the case difference| `grep -i John students.txt` |
+| `grep -r` | Search through all files in a directory and its subdirectories | `grep -r John .` |
+| `grep -v` | Find lines that do not match the pattern | `grep -v John students.txt` |
+| `grep -n` | Show line numbers | `grep -n John students.txt` |
+
+---
+
+## 2. The `awk` Command
+###  i. Purpose
+- This commmand is used for pattern scanning and processing language.
+- Useful for handling text files and is used for data extraction and reporting
+
+```bash
+awk 'pattern {action}' filename
+```
+Example:
+```bash
+awk -F "," '*{print $1}' filename
+```
+- `awk -F` => set what separates the data fields.
+- `awk -v` => set variables to be used in the script.
+- `awk -f` => Use a file as the source of the awk program.
+
+---
+
+## 4. The `sed` Command
+### i. Purpose
+- It is a stream editor used to perform basic text transformations on an input stream( a file or input from a pipeline).
+- it is used to replace a text or word in a file.
+ ```bash
+ sed 's/old_text/new_text/g' filename
+ ```
+ | Command | Meaning |
+ |------|-------|
+ | `sed -i` | Edit files directly without needing to save the file  separately|
+ | `sed -e` | Add the script to the commands to be executed |
+ | `sed -n` | Don't automatically print lines |
+ | `sed -r` | use extended regular expression |
+ | `sed -f` | Add script from a file |
+ | `sed -l` | specify line leength fo `l` command |
+ | `sed -n` | print  or delete a specific line |
+
+ ----
+
+ ## 5. The`cut` Command
+### i. Purpose
+- It is used to remove sections from each line of files.
+- It is useful for extracting specific tools of data froma file or output stream.
+
+| command | Meaning |
+|---------|---------|
+| `cut -d` | Choose what separates the field ie: `cut -d "," -f1 exapmle.txt` |
+| `cut -f` | Select specific fields to display  ie: `cu -f1 example.txt`  means that it will display the first culumn of the data|
+| `cut --complement` | Show all the field except the selected ones |
+
+---
+
+## 6. The `sort` Command
+### purpose
+- Used to sort lines of text
+```bash
+sort filename
+```
+| Command | Meaning |
+|---------| ------|
+| `sort -r` | Sort the data in reveerse order |
+| `sort -n` | Sort numbers correctly |
+| `sort -k` | Sort by specific column |
+| `sort -u` | Remove duplicates |
+| `sort -t` | Specify a delimeter for fields |
+
+---
+
+## 7. The `tail` command
+(view end)
+- It is used to display the last part of a file
+```bash
+tail-n lines file_name
+```
+| Command | Meaning |
+|-----|------|
+| `tail -n [number]` | Displays the last [number] line of a file |
+| `tail -f` | Follow the file as it grows |
+| `tail -c [number]` | Display the last [number] bytes of a file|
+| `tail --pid=[pid]` | Terminate after the process with the given pid dies |
+| `tail --retry` | Keep tring to open a fileeven if its inaccesible |
+
+Example:
+```bash
+tail -n 5 logfile.txt
+```
+The `tail` command is useful for;
+- Monitoring server logs and detecting errors in real time.
+- Checking the latest entries in a continuously updated file.
+- Debugging applications by reviewing recent log files.
+
+---
+
+## 8. The `head` command
+(view start)
+- Displays The first part of a  file 
+```bash
+head file_name
+````
+- [] `head -n [number] ` => Displays the first [number]lines of a file.
+- [] `head -c [number]` => Displays the first [number] bytes of a file.
+
+- For multiple files :
+```bash
+head -n 5 file1 file2 file3--
+```
+
+```bash
+head -q
+``` 
+This command suppresses printing of headers when multiple files are being printed.
+
+---
+
+
+# 3. SYSTEM MONITORING
+## 1. The `ps` Command
+
+
+
+
 
 
 
