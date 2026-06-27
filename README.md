@@ -30,17 +30,21 @@ To become confident using Linux and Bash by learning through notes, commands, ex
 | `08-reference` | Cheat sheets and reference notes |
 | `sandbox` | Safe practice area |
 
-## Study Method
+## Learning Philosophy
+We are not learning Linux by memorizing commands.
 
-1. Learn the concept.
-2. Write notes.
-3. Run commands.
-4. Break something safely in `sandbox`.
-5. Fix it.
-6. Document the lesson.
-7. Build a script or mini-project.
+We are learning Linux by building mental models:
+- how the filesystem is shaped
+- how the shell interprets input
+- how commands receive data
+- how commands produce output
+- how files, permissions, and processes behave
+- how to inspect before changing
+- how to combine small tools into larger workflows
 
-## Status
-
-Started: Yes
-Target: 30 days  
+## Learning Framework
+ **I.C.V.E**
+ + I - Inspect
+ + C - Change
+ + V - Execute
+ + E - Verify

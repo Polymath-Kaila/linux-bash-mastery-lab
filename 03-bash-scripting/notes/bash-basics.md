@@ -1,27 +1,49 @@
-# Bash Basics
-## Introduction
-Bash (Bourne Again Shell) is acommand-line interpreter commonly used in Linux and Unix-based operating systems. It allowa users to interactwith the operating system by typing commands instead of using a graphical interface. Bash provides a fast and efficient way to:  
-navigate directories,  
-manage files,  
-automate taks,  
-and administer systems.  
+# Intro to bash and shell
 
-Learning basic Bash commands is an essential skill for linux users, system administsrators, software developers and cybersecurity professionals. Understanding commands such as `ls`, `cd`, `pwd`, and `mkdir` help users navigate the file system, inspect directory conteents and work more effecively in aterminal environment. This guide introduces fundamental Bsh commands and their commonly used options.  
+ `A terminal` is just the interface where we type the commands.  
+ `Shell` is a command interpreter that lets us talk to the OS.  
+ `Bash` is one of the popular shell used in linux.  
+ `Bash command` is just the command or something you type in the terminal.  
+ `Bash script` is just a file containing multiple bash commands.  
+ 
 
----
-## The `ls` Command
-### Purpose
-- List files and directories.
-- Helps inspet folder contents.
-- Can display hidden files and permissions.
+### Examples of terminals
++ vs code terminal
++ windows powershell
++ ubuntu terminal
 
-### Basic Syntax
+ ### Examples of shells
+ + sh
+ + zhs
+ + fish
+ + bash
 
----
-| Command | Description/ Function | Example |
-|-------------|---------------------| ------|
-| `-l` | Long listing | `ls -l` |
-| `-a` | Show hidden files | `ls -a`|
-| `-h` | Human-readable sizes | `ls -h` |
-| `-t` | Sort by modification time | `ls -t` |
-| `-r` | Reverse Sorting | `ls -r` | 
+ ## Checking your type of shell
+ ```bash
+ echo $SHELL
+
+ ```
+ ## Checking your bash version
+ ```bash
+ bash --version
+
+ ```
+
+ ### Examples of bash commands
+ A bash comma
+ ```bash
+ ls 
+ cd Desktop
+ ```
+### Example of a bash script
+```bash
+#!/usr/bin/env bash
+
+echo "Starting backup..."
+mkdir -p backups
+cp notes.txt backups/
+echo "Backup complete."
+
+```
+`!#/usr/bin/env bash` - tells the shell system to run the script/file using bash.   
+
